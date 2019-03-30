@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="5504" started-at="2018-10-24T15:19:24Z" finished-at="2018-10-24T15:19:30Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="5504" started-at="2018-10-24T15:19:24Z" finished-at="2018-10-24T15:19:30Z">
+      <class name="Testcases.TestCommodityForm">
+        <test-method status="PASS" signature="test_Commodity_Details_Scenario1()[pri:0, instance:Testcases.TestCommodityForm@47c62251]" name="test_Commodity_Details_Scenario1" duration-ms="5493" started-at="2018-10-24T20:49:24Z" finished-at="2018-10-24T20:49:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Commodity_Details_Scenario1 -->
+      </class> <!-- Testcases.TestCommodityForm -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
