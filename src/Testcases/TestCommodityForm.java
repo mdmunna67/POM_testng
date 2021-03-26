@@ -24,16 +24,22 @@ public class TestCommodityForm  {
 	{
 //		DriverSetup d=new DriverSetup();
 //		driver = d.DriverSetup();
-		System.setProperty("webdriver.chrome.driver", "F:\\selenium\\chromedriver.exe");
-		ChromeOptions chromeOptions = new ChromeOptions();
-
+		System.setProperty("webdriver.chrome.driver","/app/bin/chromedriver");
+        ChromeOptions options = new ChromeOptions();
 		Map<String, Object> prefs = new HashMap<String, Object>();
-
 		prefs.put("intl.accept_languages", "ja");
-
-		chromeOptions.setExperimentalOption("prefs", prefs);
-
-		WebDriver driver = new ChromeDriver(chromeOptions);
+		options.setExperimentalOption("prefs", prefs);
+        options.addArguments("--headless");
+        options.addArguments("--no-sandbox");
+        System.setProperty("webdriver.chrome.args", "--disable-logging");
+        System.setProperty("webdriver.chrome.silentOutput", "true");
+        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+        options.addArguments("disable-infobars"); // disabling infobars
+        options.addArguments("--disable-extensions"); // disabling extensions
+        options.addArguments("--disable-gpu"); // applicable to windows os only
+        options.addArguments("window-size=1024,768"); // Bypass OS security model
+        //options.setCapability("chrome.verbose", false); //disable logging
+        WebDriver driver = new ChromeDriver(options);
 
 		driver.get("https://www.google.co.jp/search?ei=hIPQW6KaFsbVvgSmp7nQAQ&q=japanese+sites+for+used+cars+&oq=japanese+sites+for+used+cars+&gs_l=psy-ab.3..0i30k1.7506.22472.0.22878.6.6.0.0.0.0.142.713.0j6.6.0....0...1c.1.64.psy-ab..0.6.711...0i22i30k1j0i7i30k1j0i8i7i30k1j0i8i30k1.0.9Lo6To9kwfo");
 		
